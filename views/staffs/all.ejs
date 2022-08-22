@@ -1,0 +1,9 @@
+<h2>All Staffs</h2>
+<form action="/staffs/all/?_method=DELETE" method="POST">
+  <button type="Submit">DeleteAll</button>
+</form>
+<% all.forEach(e => {%> <%=e.id%> <%=e.name%>
+<form action="/staffs/<%=e.id%>?_method=DELETE" method="POST">
+  <button type="Submit">Delete</button>
+</form>
+<%});%>
